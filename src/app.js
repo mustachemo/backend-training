@@ -1,4 +1,6 @@
 import express from 'express';
+import { fileURLToPath } from 'url';
+import path from 'path';
 import nunjucks from 'nunjucks';
 import dotenv from 'dotenv';
 
@@ -14,3 +16,5 @@ nunjucks.configure(path.join(__dirname, 'views'), {
 });
 app.set('view engine', 'njk');
 app.set('port', process.env.PORT);
+
+export default app;
