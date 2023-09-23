@@ -10,6 +10,7 @@ backend training for hackmerced team workshop! 09/24/23
 
      - You can install Node.js through Homebrew, which is a macOS package manager.
        - Install Homebrew: [https://docs.brew.sh/Installation](https://docs.brew.sh/Installation)
+     - Or straight through the website
        - Install Node.js: [https://nodejs.org/en](https://nodejs.org/en)
 
    - **Windows:**
@@ -36,9 +37,9 @@ backend training for hackmerced team workshop! 09/24/23
    To create a web application with Node.js, you can use the Express.js framework. Install it using npm with the following command:
 
    ```bash
-   npm install express
+   npm install express mongoose nunjucks
    ```
 
 4. Create a public folder for assets
 5. Create a src folder and add the main entry js file there, along with MVC folders
-6. Rest will be followed as during the session
+6. Rest will be followed as during the session...

@@ -2,9 +2,9 @@
   "name": "backend-training",
   "version": "1.0.0",
   "description": "training to practice backend web deveoopment",
-  "main": "entry.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
