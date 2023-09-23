@@ -37,7 +37,7 @@ backend training for hackmerced team workshop! 09/24/23
    To create a web application with Node.js, you can use the Express.js framework. Install it using npm with the following command:
 
    ```bash
-   npm install express mongoose nunjucks dotenv path
+   npm install express mongoose nunjucks dotenv morgan
    ```
 
 4. Create a public folder for assets
