@@ -14,7 +14,7 @@ console.log('filename', __filename);
 const __dirname = path.dirname(__filename);
 console.log('dirname', __dirname);
 
-app.set('/views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT);
 
