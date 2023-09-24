@@ -32,9 +32,9 @@ backend training for hackmerced team workshop! 09/24/23
 
    ```
 
-3. Install Express.js
+3. Install required packages
 
-   To create a web application with Node.js, you can use the Express.js framework. Install it using npm with the following command:
+   To create a web application with Node.js, you can use the Express.js framework. Install it using npm with the following command along with some "required" packages:
 
    ```bash
    npm install express mongoose nunjucks dotenv morgan
