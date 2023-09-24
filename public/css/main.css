@@ -1,0 +1,55 @@
+/* RESET */
+:root {
+  /* give me a nice background color */
+  --background-color: #75d86e;
+  --body-color: #d1f8c6;
+  --navbar-hover-color: #e6e6e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: 'Playfair Display', serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  margin: 1rem;
+  color: black;
+  font-family: 'Lobster', cursive;
+}
+
+.navbar-links ul {
+  display: flex;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 1.6rem;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.navbar-links li:hover {
+  background-color: var(--navbar-hover-color);
+}
