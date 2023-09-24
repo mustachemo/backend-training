@@ -21,6 +21,8 @@ app.set('port', process.env.PORT);
 
 app.use('/public', express.static('public'));
 app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 import mongoose from 'mongoose';
 
@@ -50,10 +52,6 @@ app.get('/', async (req, res) => {
     const messages = await Message.find();
     const plainMessages = messages.map((message) => message.toObject());
 
-    plainMessages.forEach((message) => {
-      const date = new Date(message.createdAt);
-      message.createdAt = format(date, 'dd/MM/yyyy');
-    });
     res.render('index', {
       messages: plainMessages,
     });
@@ -63,7 +61,6 @@ app.get('/', async (req, res) => {
       connectionMessage: 'Error getting messages from database',
     });
   }
-  res.render('index');
 });
 
 app.get('/add', async (req, res) => {
@@ -81,16 +78,17 @@ app.get('/add', async (req, res) => {
 });
 
 app.post('/add', async (req, res) => {
+  console.log(req.body);
   const { author, message } = req.body;
   const newMessage = new Message({ name: author, message: message });
   try {
     await newMessage.save();
-    res.render('form', {
+    res.render('add', {
       resolutionMessage: 'collection item successfully added!',
     });
   } catch (error) {
     console.error(error);
-    res.render('form', {
+    res.render('add', {
       resolutionMessage: 'Error inputting data into database',
     });
   }

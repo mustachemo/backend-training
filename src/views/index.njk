@@ -1,16 +1,11 @@
 {% extends 'base.njk' %}
 
 {% block title %}
-    Mini Messageboard
+    Home
 {% endblock %}
 
 {% block main %}
     <div class="message-container">
-        {% if connectionMessage %}
-            <div class="message">
-                <h3 class="message-author">{{ message }}</h3>
-            </div>
-        {% endif %}
         {% for message in messages %}
             <div class="message">
                 <h3 class="message-author">{{ message.name }}</h3>

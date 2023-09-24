@@ -7,15 +7,15 @@
 {% block main %}
     <div class="form-container">
         <h2>Add a Message</h2>
-        <form id="message-form" action="/new" method="POST">
-        <label for="author">Author's Name</label>
-        <input type="text" id="author" name="author" required>
-        
-        <label for="message">Message Text</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Submit</button>
-        <h1>{{ resolutionMessage}}</h1>
+        <form id="message-form" action="/add" method="POST">
+            <label for="author">Author's Name</label>
+            <input type="text" id="author" name="author" required>
+            
+            <label for="message">Message Text</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+            <h1>{{ resolutionMessage}}</h1>
         </form>
     </div>
 {% endblock %}
