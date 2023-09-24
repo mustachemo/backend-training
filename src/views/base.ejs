@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} index {% endblock %}</title>
+    <title><%= title || 'index' %></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap" rel="stylesheet" />
-
     <link href="public/css/main.css" rel="stylesheet" />
   </head>
   <body>
@@ -29,7 +28,7 @@
       </div>
     </nav>
 
-    <main>{% block main %} {% endblock %}</main>
+    <main><%= main %></main>
 
     <footer class="footer">
       <div class="footer-text">created by mustachemo for The Odin Project</div>
